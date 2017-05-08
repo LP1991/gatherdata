@@ -25,7 +25,6 @@ public class TestDomainInfo {
 // {"mac":"C7-A4-01-01-01-03","x":165.0,"y":301.0},{"mac":"C7-A4-01-01-01-04","x":626.0,"y":194.0},{"mac":"C7-A4-01-01-01-05","x":317.0,"y":452.0},
 // {"mac":"C7-A4-01-01-01-06","x":1000.0,"y":116.0}],
 // "obstacles":[],"coverages":[{"id":4,"name":"B"},{"id":5,"name":"A"},{"id":6,"name":"D"}]}],
-//        "description":"Operation success."
 //    }
     private static Map<Integer,String> regionPaths;
     private static Map<Integer,ApInfo> apInfoMap;
