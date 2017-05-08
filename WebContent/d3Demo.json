@@ -1,0 +1,14 @@
+{
+  "nodes": [
+    {"id": "表格1", "group": 1},
+    {"id": "表格2", "group": 2},
+    {"id": "表格3", "group": 3},
+    {"id": "目标", "group": 4}
+  ],
+  "links": [
+    {"source": "表格1", "target": "表格2", "value": 1},
+    {"source": "表格2", "target": "表格3", "value": 2},
+    {"source": "表格3", "target": "目标", "value":3},
+    {"source": "表格2", "target": "目标", "value": 4}
+  ]
+}

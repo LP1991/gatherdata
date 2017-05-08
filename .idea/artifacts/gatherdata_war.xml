@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="gatherdata:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="gatherdata-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="gatherdata:war exploded" />
+    </root>
+  </artifact>
+</component>
