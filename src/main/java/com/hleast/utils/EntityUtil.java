@@ -33,14 +33,22 @@ public class EntityUtil {
                         name = s;
                         index++;
                         break;
-                    case 2:
-                        type =s;
+                    case 3:
+                        if (s.indexOf("String")>-1){
+                            type = "String";
+                        } else if (s.indexOf("Integer")>-1) {
+                            type = "Integer";
+                        }
                         index++;
                         break;
-                    case 3:
+                    case 2:
                         desc = s;
+                        index++;
+                        break;
+                    case 4:
+                        desc = desc+", allow null:"+s;
                         propertyList.add(new Property(name,type,desc));
-                        index = 1;
+                        index=1;
                         break;
                 }
             }

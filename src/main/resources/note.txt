@@ -1,224 +1,76 @@
-
-username
-
-String
-
-用户名
-
-
-mac
-
-String
-
-MAC
-
-
-neDn
-
-String
-
-接入AC的唯一标识
-
-
-acName
-
-String
-
-接入AC名称
-
-
-nodeDn
-
-String
-
-接入AP的唯一标识
-
-
-apId
-
-String
-
-接入AP索引
-
-
-apName
-
-String
-
-接入AP名称
-
-
-userIp
-
-String
-
-IP地址
-
-
-userIpv6Address
-
-String
-
-IPV6地址
-
-
-status
-
-int
-
-状态
-
-
-accessIf
-
-String
-
-接入接口
-
-
-vlanId
-
-int
-
-接入VLAN
-
-
-starttime
-
-String
-
-上线时间
-
-
-ssid
-
-String
-
-接入SSID
-
-
-accessonlinetime
-
-String
-
-在线时间(s)
-
-
-authtype
-
-int
-
-认证类型
-
-
-authenmethod
-
-String
-
-AAA认证方式
-
-
-linkAuthType
-
-int
-
-链路认证方式
-
-
-radioId
-
-int
-
-射频ID
-
-
-radioFrequency
-
-String
-
-工作频段
-
-
-rfmode
-
-String
-
-连接模式
-
-
-bandwidth
-
-int
-
-信道频宽
-
-
-snr
-
-String
-
-信噪比
-
-
-rxpower
-
-String
-
-信号质量
-
-
-txrate
-
-String
-
-发送速率(kbit/s)
-
-
-rxrate
-
-String
-
-接收速率(kbit/s)
-
-
-txbytes
-
-String
-
-发送流量(KB)
-
-
-rxbytes
-
-String
-
-接收流量(KB)
-
-
-losePackage
-
-String
-
-报文丢包率
-
-
-retranserPackage
-
-String
-
-报文重传率
-
-
-regionId
-
-String
-
-区域ID
-
-
-regionName
-
-String
-
-区域名称 格式为：“南京>N3>3F”
-
+plateNo
+车牌号码 车牌号码
+String StringStringString
+否
+ownerId
+车主 ID
+IntegerInteger Integer
+否
+driver
+驾驶员姓名 驾驶员姓名
+String StringStringString
+否
+driverPhone
+驾驶员电话 驾驶员电话
+String StringStringString
+是
+indexCode
+车辆系统唯一标识 车辆系统唯一标识 车辆系统唯一标识 车辆系统唯一标识
+String StringStringString
+否
+cardNo
+卡号
+IntegerInteger Integer
+是
+color
+车辆颜色类型码 车辆颜色类型码 车辆颜色类型码
+IntegerInteger Integer
+是
+colorName
+车辆颜色名称 车辆颜色名称 车辆颜色名称
+String StringStringString
+是
+carType
+车辆类型码 车辆类型码
+IntegerInteger Integer
+否
+carTypeName
+车辆类型名称 车辆类型名称 车辆类型名称
+String StringStringString
+是
+plateColor
+车牌颜色类型码 车牌颜色类型码 车牌颜色类型码
+IntegerInteger Integer
+否
+plateColorName
+车牌颜色名称 车牌颜色名称 车牌颜色名称
+String StringStringString
+是
+plateType
+车牌类型码 车牌类型码
+IntegerInteger Integer
+否
+plateTypeName
+车牌类型名称 车牌类型名称 车牌类型名称
+String StringStringString
+是
+plateStart
+车牌发照日期， 车牌发照日期， 车牌发照日期， 车牌发照日期， LongLong 型数字 （毫秒 值）
+LongLong
+是
+carBrand
+车辆品牌 车辆品牌
+IntegerInteger Integer
+是
+num
+车辆核定载客数 车辆核定载客数 车辆核定载客数
+IntegerInteger Integer
+是
+createTime
+创建时间 创建时间 ，LongLong 型数字（毫秒 型数字（毫秒 型数字（毫秒 型数字（毫秒 值）
+LongLong
+是
+updateTime
+修改时间 修改时间 ，LongLong 型数字（毫秒 型数字（毫秒 型数字（毫秒 型数字（毫秒 值）
+LongLong
+是

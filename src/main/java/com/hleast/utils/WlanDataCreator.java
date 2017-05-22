@@ -41,17 +41,9 @@ public class WlanDataCreator {
         }
     }
 
-    public static long getNum(int i) {
-        long t = 1;
-        for (int j = 0; j < i; j++) {
-            t = (t+n.nextInt(10))*10;
-        }
-        return t;
-    }
-
     public static AcData createData(){
         AcData data = new AcData();
-        data.setNeDn("NE="+getNum(8));
+        data.setNeDn("NE="+CommonUtil.getNum(8));
         data.setAcName("AC6605_42");
         data.setApAuthMode(n.nextInt(3)+1);
         data.setAcIp(JavaBitwise.longToIp(3232235777L+n.nextInt(255*255)));
@@ -72,12 +64,12 @@ public class WlanDataCreator {
         return data;
     }
 
-    public static String createData(int num) throws IOException, JSONException {
+    public static JSONArray createData(int num) throws IOException, JSONException {
         JSONArray arr = new JSONArray();
         ObjectMapper mapper = new ObjectMapper();
         for (int i = 0; i < num; i++) {
             AcData data = new AcData();
-            data.setNeDn("NE="+getNum(8));
+            data.setNeDn("NE="+CommonUtil.getNum(8));
             data.setAcName("AC6605_"+n.nextInt(100));
             data.setApAuthMode(n.nextInt(3)+1);
             data.setAcIp(JavaBitwise.longToIp(3232235777L+n.nextInt(255*255)));
@@ -98,16 +90,16 @@ public class WlanDataCreator {
             JSONObject o = new JSONObject(mapper.writeValueAsString(data));
             arr.put(o);
         }
-        return arr.toString();
+        return arr;
     }
 
-    public static String createAPData(int size) throws IOException, JSONException {
+    public static JSONArray createAPData(int size) throws IOException, JSONException {
         JSONArray arr = new JSONArray();
         ObjectMapper mapper = new ObjectMapper();
         for (int i = 0; i < size; i++) {
             ApData data = new ApData();
-            data.setNodeDn("NE="+getNum(8));
-            data.setNeDn("NE="+getNum(8));
+            data.setNodeDn("NE="+CommonUtil.getNum(8));
+            data.setNeDn("NE="+CommonUtil.getNum(8));
             data.setApname("AP-"+n.nextInt(100));
             data.setApId(n.nextInt(100)+"");
             data.setStatus(n.nextInt(9)+1);
@@ -116,7 +108,7 @@ public class WlanDataCreator {
             data.setApIp(JavaBitwise.longToIp(3232235777L+n.nextInt(255*255)));
             data.setGroupName("group"+n.nextInt(9)+1);
             data.setAcName("AC-SPU-zhs-"+n.nextInt(10));
-            data.setLocationId("/>NEGROUP="+getNum(8));
+            data.setLocationId("/>NEGROUP="+CommonUtil.getNum(8));
             data.setRegionLocation("test"+n.nextInt(10)+1);
             data.setApAlias("");
             data.setCategory(n.nextInt(2)+1+"");
@@ -139,7 +131,7 @@ public class WlanDataCreator {
             JSONObject o = new JSONObject(mapper.writeValueAsString(data));
             arr.put(o);
         }
-        return arr.toString();
+        return arr;
     }
 
 //    "data":[{"snr":"","apName":"AP-1","userIp":"","txRate":"","mac":"C1-01-31-11-01-43","nodeDn":"NE=34603012","vlanId":0,
@@ -148,16 +140,16 @@ public class WlanDataCreator {
 // "neDn":"NE=34603010","rxBytes":"","accessIf":"","acName":"AC-SPU-zhs-9","accessOnlineTime":"","linkAuthType":8,"rxRate":"",
 // "rxPower":"","regionId":"NEGROUP=11111111","regionName":"nanjin>N3>3F"}]
 
-    public static String createUserData(int size) throws IOException, JSONException {
+    public static JSONArray createUserData(int size) throws IOException, JSONException {
         JSONArray arr = new JSONArray();
         ObjectMapper mapper = new ObjectMapper();
         for (int i = 0; i < size; i++) {
             UserData data = new UserData();
             data.setUsername(paths[n.nextInt(paths.length)]+paths[n.nextInt(paths.length)]+paths[n.nextInt(paths.length)]+paths[n.nextInt(paths.length)]+paths[n.nextInt(paths.length)]);
             data.setMac(RandomMacAddress.getMacAddrWithFormat("-"));
-            data.setNeDn("NE="+getNum(8));
+            data.setNeDn("NE="+CommonUtil.getNum(8));
             data.setAcName("AC-SPU-zhs-"+n.nextInt(10));
-            data.setNodeDn("NE="+getNum(8));
+            data.setNodeDn("NE="+CommonUtil.getNum(8));
             data.setApId(n.nextInt()+"");
             data.setApName("AP-"+n.nextInt(100));
             data.setUserIp(JavaBitwise.longToIp(3232235777L+n.nextInt(255*255)));
@@ -191,6 +183,6 @@ public class WlanDataCreator {
             JSONObject o = new JSONObject(mapper.writeValueAsString(data));
             arr.put(o);
         }
-        return arr.toString();
+        return arr;
     }
 }

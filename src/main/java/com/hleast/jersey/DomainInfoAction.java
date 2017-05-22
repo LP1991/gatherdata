@@ -16,16 +16,23 @@ import org.codehaus.jettison.json.JSONArray;
 import org.codehaus.jettison.json.JSONException;
 import org.codehaus.jettison.json.JSONObject;
 
-import javax.ws.rs.Consumes;
-import javax.ws.rs.FormParam;
-import javax.ws.rs.POST;
-import javax.ws.rs.Path;
+import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import java.text.SimpleDateFormat;
 import java.util.List;
 
 @Path("rtls")
 public class DomainInfoAction {
+    /**
+     * 服务健康情况测试
+     * @return
+     */
+    @GET
+    @Produces(MediaType.TEXT_PLAIN)
+    public String testServer() {
+        return "healthy";
+    }
+
 
     @POST
     @Path("/locationmap")
